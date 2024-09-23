@@ -4,19 +4,22 @@ public class Student {
     private double averageScore;
 
     //construtor - setiap class kena ada constructor utk default value
-    public Student (String studentName, int[] scores){
-        this.studentName = studentName;
-        this.scores = scores;
+    public Student(String setStudentName, int setMathScore, int setScienceScore, int setEnglishScore) {
+        this.studentName = setStudentName;
+        this.scores[0] = setMathScore;
+        this.scores[1] = setScienceScore;
+        this.scores[2] = setEnglishScore;
+        this.averageScore = calculateAverage(); 
     }
 
     //method to calculate the average score (loops)
-    public void calculateAverage() {
-        int sum = 0;
-        for (int score:scores) {  //using loops to convert array to number
-            sum+=score; //sum of scores
+    public double calculateAverage() {
+        int total = 0;
+        for (int score : scores) {
+            total += score;
         }
-        averageScore = (double) sum / scores.length; // include the equation for averageScore, scores.length is 3 (math, science, english)
-        System.out.println(averageScore);
+        averageScore = (double) total / scores.length;
+        return averageScore;
     }
 
     //getter for student name

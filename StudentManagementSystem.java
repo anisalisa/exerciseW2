@@ -5,7 +5,7 @@ public class StudentManagementSystem {
         Student[] students = new Student[5];
         Scanner scanner = new Scanner(System.in);
 
-        for (int i=0; i<5; i++){
+        for (int i=0; i<students.length; i++){
             
             System.out.println("Enter below details ");
             System.out.println("Enter student name: ");
@@ -16,9 +16,15 @@ public class StudentManagementSystem {
             int setScienceScore = scanner.nextInt();
             System.out.println("Enter english score: " );
             int setEnglishScore = scanner.nextInt();
+            scanner.nextLine();
             students[i] = new Student(setStudentName, setMathScore, setScienceScore, setEnglishScore);
 
         }
+        System.out.println("Students grades:");
+        for (Student student: students){
+            student.
+        }
+
         scanner.close();
     } 
 }
