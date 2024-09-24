@@ -1,16 +1,15 @@
 public class Student {
     private String studentName;
-    private int[] scores; //array for math, science and english scores
+    private int[] scores;
     private double averageScore;
 
-    //construtor - setiap class kena ada constructor utk default value
+    //construtor 
     public Student(String setStudentName, int setMathScore, int setScienceScore, int setEnglishScore) {
         this.studentName = setStudentName;
-        this.scores[0] = setMathScore;
-        this.scores[1] = setScienceScore;
-        this.scores[2] = setEnglishScore;
-        this.averageScore = calculateAverage(); 
+        this.scores = new int[]{setMathScore, setScienceScore, setEnglishScore};
+        this.averageScore = calculateAverage(); // Calculate the average at the time of object creation
     }
+
 
     //method to calculate the average score (loops)
     public double calculateAverage() {
@@ -53,41 +52,4 @@ public class Student {
             return 'F';
         }
     }
-    // public static void main(String[] args) {
-    //     //Array to hold a list of 5 students
-    //     String[] students = new String[5];
-    //     //int[][] scores = new int [3][5];
-    //     Student marks = new Student(null,null); //object, parameter utk contructor = null
-        
-
-    //     students[0] = "Anis";
-    //     students[1] = "Alisa";
-    //     students[2] = "Sabrina";
-    //     students[3] = "Rara";
-    //     students[4] = "Fathin";
-
-    //     int[][] scores = {
-    //         {78, 89, 32},
-    //         {69, 56, 89},
-    //         {67, 87, 90},
-    //         {77, 98, 45},
-    //         {67, 88, 56}
-    //     };
-        
-
-    //     for (int row=0; row<scores.length; row++){ 
-    //         marks.setName(students[row]);
-    //         System.out.println("Student name: " + marks.getName());
-            
-    //         for (int col=0; col<scores[row].length; col++){ // to escape the matrix into array form
-    //             marks.setScores(scores[row]);
-    //             System.out.println(marks.getScore()[col]);
-    //         }
-    //          marks.calculateAverage();
-    //          System.out.println("Your grade is: " + marks.assignGrade());
-
-    //      }
-    //     }
-        }
-           
-    
+}
