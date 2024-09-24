@@ -13,10 +13,13 @@ public class EmployeeSalary {
             String name = scanner.nextLine();
             System.out.println("Enter base salary: ");
             double baseSalary = scanner.nextDouble();
+            scanner.nextLine(); 
             System.out.println("Enter health allowance: ");
             double healthAllowance = scanner.nextDouble();
+            scanner.nextLine(); 
             System.out.println("Enter transport allowance: ");
             double transportAllowance = scanner.nextDouble();
+            scanner.nextLine(); 
 
             employee[i] = new Employee(name, baseSalary, healthAllowance, transportAllowance);
         }
