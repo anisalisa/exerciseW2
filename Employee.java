@@ -4,8 +4,7 @@ public class Employee {
     private double healthAllowance;
     private double transportAllowance;
     private double totalSalary;
-    private double bonus;
-    private double totalAllowances;
+    private double totalBonus;
 
     //constructor
     public Employee(String name, double baseSalary, double healthAllowance, double transportAllowance){
@@ -17,7 +16,7 @@ public class Employee {
     }
     //method for totalSalary
     public double calculateTotalSalary() {
-        double totalSalary = baseSalary + healthAllowance + transportAllowance + bonus;
+        double totalSalary = baseSalary + healthAllowance + transportAllowance + assignBonus();
         return totalSalary;
     }
     //getter for name
@@ -36,10 +35,21 @@ public class Employee {
     public void setBaseSalary (double baseSalary){
         this.baseSalary = baseSalary;
     }
-    //method for allowance
-    public double totalOfAllowances(){
-        double totalAllowances = healthAllowance + transportAllowance + bonus;
-        return totalAllowances;
+    //getter for h-allowance
+    public double getHealthAllowance(){
+        return healthAllowance;
+    }
+    //setter for h-allowance
+    public void setHealthAllowance (double healthAllowance){
+        this.healthAllowance = healthAllowance;
+    }
+    //getter for t-allowance
+    public double getTransportAllowance(){
+        return transportAllowance;
+    }
+    //setter for t-allowance
+    public void setTransportAllowance (double transportAllowance){
+        this.transportAllowance = transportAllowance;
     }
     //method for assignBonus
     public double assignBonus(){
@@ -52,7 +62,8 @@ public class Employee {
         } else {
             bonus = 0.0;
         }
-        return bonus;
+        double totalBonus = baseSalary + (bonus * baseSalary);
+        return totalBonus;
     } 
     
 }
