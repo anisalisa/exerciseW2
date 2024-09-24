@@ -55,19 +55,15 @@ public class Employee {
         System.out.println(name + "'s total salary: RM " + totalSalary);
     }
     public static void main(String[] args) {
-        
-
-        try{
-            Employee[] employees = new Employee [5];
+        Employee[] employees = new Employee [5];
             employees[0] = new Employee("Anis", 70000, 890, 890);
             employees[1] = new Employee("Alisa", 90000, 890, 890);
             employees[2] = new Employee("Nor", 100000, 890, 890);
             employees[3] = new Employee("Azhar", 500000, 890, 890);
             employees[4] = new Employee("Alia", 20000, 890, 890);
 
-            for (Employee employ: employees){
-            employ.displayEmployee();
-        }
+        try{
+
             System.out.println(employees[10]);
         } catch(ArrayIndexOutOfBoundsException e){
             System.out.println("Caught bad "+ e.getMessage());
@@ -75,6 +71,9 @@ public class Employee {
             System.out.println("It will executed anyway");
         }
         System.out.println("The program is continue");
+        for (Employee employ: employees){
+            employ.displayEmployee();
+        }
     }
     } 
     
