@@ -13,6 +13,7 @@ public class EmployeeSalary {
             String name = scanner.nextLine();
             System.out.println("Enter base salary: ");
             double baseSalary = scanner.nextDouble();
+<<<<<<< HEAD
             scanner.nextLine();
             System.out.println("Enter health allowance: ");
             double healthAllowance = scanner.nextDouble();
@@ -20,6 +21,15 @@ public class EmployeeSalary {
             System.out.println("Enter transport allowance: ");
             double transportAllowance = scanner.nextDouble();
             scanner.nextLine();
+=======
+            scanner.nextLine(); 
+            System.out.println("Enter health allowance: ");
+            double healthAllowance = scanner.nextDouble();
+            scanner.nextLine(); 
+            System.out.println("Enter transport allowance: ");
+            double transportAllowance = scanner.nextDouble();
+            scanner.nextLine(); 
+>>>>>>> 9ce4a652a9442e0a1ba55e81ebecd300ee0bcb27
 
             employee[i] = new Employee(name, baseSalary, healthAllowance, transportAllowance);
         }
