@@ -28,9 +28,9 @@ public class EmployeeSystem {
     public double assignBonus(){
         double bonus = 0.0;
 
-        if (baseSalary>=50000){
+        if (baseSalary>=5000){
             bonus = 0.10;
-        } else if (baseSalary>=30000){
+        } else if (baseSalary>=3000){
             bonus = 0.05;
         } else {
             bonus = 0.0;
