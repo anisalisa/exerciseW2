@@ -1,3 +1,7 @@
+import java.util.ArrayList; 
+import java.util.function.Predicate; 
+import java.time.LocalDateTime; 
+
 public class Employee {
     private String name;
     private double baseSalary;
@@ -48,32 +52,51 @@ public class Employee {
         }
         double totalBonus = baseSalary + (bonus * baseSalary);
         return totalBonus;
+        Predicate<Double> newBonus = (num) -> num > 1000;
+        if (newBonus.test(assignBonus())){
+            System.out.println("Congrats! You got your bonus");
+        } else{
+            System.out.println("Try again");
+        }
     } 
     public void displayEmployee(){
         System.out.println("Employee's name: " + name);
-        System.out.println(name + "'s bonus: RM " + assignBonus());
-        System.out.println(name + "'s total salary: RM " + totalSalary);
+        System.out.println(" Employee's bonus: RM " + assignBonus());
+        //System.out.println(name + "'s total salary: RM " + totalSalary);
     }
     public static void main(String[] args) {
-        Employee[] employees = new Employee [5];
-            employees[0] = new Employee("Anis", 70000, 890, 890);
-            employees[1] = new Employee("Alisa", 90000, 890, 890);
-            employees[2] = new Employee("Nor", 100000, 890, 890);
-            employees[3] = new Employee("Azhar", 500000, 890, 890);
-            employees[4] = new Employee("Alia", 20000, 890, 890);
+        // Employee[] employees = new Employee [5];
+        //     employees[0] = new Employee("Anis", 70000, 890, 890);
+        //     employees[1] = new Employee("Alisa", 90000, 890, 890);
+        //     employees[2] = new Employee("Nor", 100000, 890, 890);
+        //     employees[3] = new Employee("Azhar", 500000, 890, 890);
+        //     employees[4] = new Employee("Alia", 20000, 890, 890);
+            
+        ArrayList<Employee>employee = new ArrayList<>();
+        ArrayList<Integer>salaries = new ArrayList<>();
+        
+        
 
-        try{
+        employee.add(new Employee ("Anis", 70000, 890, 890));
+        employee.add(new Employee ("Alisa", 90000, 890, 890));
+        employee.add(new Employee ("Nor", 100000, 890, 890));
 
-            System.out.println(employees[10]);
-        } catch(ArrayIndexOutOfBoundsException e){
-            System.out.println("Caught bad "+ e.getMessage());
-        } finally{
-            System.out.println("It will executed anyway");
-        }
-        System.out.println("The program is continue");
-        for (Employee employ: employees){
+        for (Employee employ: employee){
             employ.displayEmployee();
-        }
-    }
+            
+        
+        // try{
+
+        //     System.out.println(employees[10]);
+        // } catch(ArrayIndexOutOfBoundsException e){
+        //     System.out.println("Caught bad "+ e.getMessage());
+        // } finally{
+        //     System.out.println("It will executed anyway");
+        // }
+        // System.out.println("The program is continue");
+        // for (Employee employ: employees){
+        //     employ.displayEmployee();
+        // }
     } 
+    } }
     
