@@ -52,16 +52,16 @@ public class Employee {
         }
         double totalBonus = baseSalary + (bonus * baseSalary);
         return totalBonus;
+    } 
+    public void displayEmployee(){
+        System.out.println("Employee's name: " + name);
+        System.out.println(" Employee's bonus: RM " + assignBonus());
         Predicate<Double> newBonus = (num) -> num > 1000;
         if (newBonus.test(assignBonus())){
             System.out.println("Congrats! You got your bonus");
         } else{
             System.out.println("Try again");
         }
-    } 
-    public void displayEmployee(){
-        System.out.println("Employee's name: " + name);
-        System.out.println(" Employee's bonus: RM " + assignBonus());
         //System.out.println(name + "'s total salary: RM " + totalSalary);
     }
     public static void main(String[] args) {
